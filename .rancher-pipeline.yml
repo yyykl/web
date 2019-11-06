@@ -1,0 +1,11 @@
+stages:
+- name: build-image
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: ykltest
+      pushRemote: true
+      registry: 10.13.33.32:5000
+timeout: 60
+notification: {}
